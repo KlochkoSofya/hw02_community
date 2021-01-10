@@ -12,14 +12,13 @@ class PostAdmin(admin.ModelAdmin):
     list_filter = ("pub_date",) 
     empty_value_display = "-пусто-"
 
+
 class GroupAdmin(admin.ModelAdmin):
-    # перечисляем поля, которые должны отображаться в админке
     list_display = ("title", "description", "slug") 
-    # добавляем интерфейс для поиска по тексту постов
     search_fields = ("title", "description",) 
-    # добавляем возможность фильтрации по дате
     list_filter = ("slug",) 
     empty_value_display = "-пусто-"
+
 
 # при регистрации модели Post источником конфигурации для неё назначаем класс PostAdmin
 
